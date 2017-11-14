@@ -1,0 +1,27 @@
+.mat-toolbar.mat-primary {
+    -webkit-box-shadow: 0 -1px 3px rgba(0,0,0,0.18);
+    -moz-box-shadow: 0 -1px 3px rgba(0,0,0,0.18);
+    box-shadow: 0 1px -3px rgba(0,0,0,0.18);
+    background-color: #69628c;
+}
+.mat-toolbar-row, .mat-toolbar-single-row {
+    height: 50px;
+}
+.logo-binotel {
+    margin: 0 auto;
+}
+.logo-binotel img {
+    padding-left: 40px;
+}
+.cdk-overlay-pane {
+    top: 65px !important;
+    right: 10px !important;
+}
+.nav-active {
+    background-color: #3e3e45;
+    color: #fff;
+}
+
+.nav-active mat-icon {
+    color: #fff !important;
+}
