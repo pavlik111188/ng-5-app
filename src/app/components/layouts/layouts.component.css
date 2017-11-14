@@ -4,9 +4,6 @@
     box-shadow: 0 1px -3px rgba(0,0,0,0.18);
     background-color: #69628c;
 }
-.mat-toolbar-row, .mat-toolbar-single-row {
-    height: 50px;
-}
 .logo-binotel {
     margin: 0 auto;
 }
@@ -24,4 +21,19 @@
 
 .nav-active mat-icon {
     color: #fff !important;
+}
+.mat-toolbar-row, .mat-toolbar-single-row {
+    height: auto;
+    font-size: 13px;
+}
+.mat-select-value-text {
+    font-size: 13px;
+}
+.mat-form-field-infix {
+    width: 120px !important;
+}
+@media (max-width: 600px) {
+    .mat-toolbar-row, .mat-toolbar-single-row {
+        height: auto;
+    }
 }

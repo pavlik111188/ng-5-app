@@ -8,6 +8,10 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  departs = [
+    'АО - Административный отдел', 'ОП - команда Альфа', 'ОП - команда Ярослава Билодида', 'Отдел Качества', 'Отдел продаж', 'Отдел техподдержки', 'ОТП | Отдел приёма обращений'
+  ];
+
   constructor() { }
 
   ngOnInit() {
