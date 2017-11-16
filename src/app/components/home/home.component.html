@@ -3,15 +3,47 @@
     <div>
       <mat-toolbar-row>
         <mat-form-field>
-          <mat-select placeholder="На все номера">
-            <mat-option>None</mat-option>
-            <mat-option *ngFor="let depart of departs" [value]="depart">{{depart}}</mat-option>
+          <mat-select placeholder="Выбор отдела">
+            <mat-option>На все номера</mat-option>
+            <mat-option *ngFor="let depart of departs; let i = index" [value]="depart">{{depart}}</mat-option>
           </mat-select>
         </mat-form-field>
+        <button mat-fab class="show-stat-btn" (click)="getStat()">
+          <mat-icon aria-label="Show statistic">sort</mat-icon>
+        </button>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
       </mat-toolbar-row>
+      <div class="stat-block" *ngIf="showStat">
+        Всех звонков за выбранный период: <b>{{ countAll }}</b>  из них уникальных: <b>{{ countUniqueNumbers }}</b> <br />
+        Звонили впервые: <b>{{ isNewCall }}</b>  ({{ isNewCallPercent }}%) <br />
+        Принятых звонков: 894  (68.98%) <br />
+        Непринятых звонков: 402  (31.02%)  из них звонили впервые: 42 <br />
+        Длительность всех разговоров: 58:13:49 <br />
+        Среднее время разговора: 03:54 <br />
+        Среднее время ожидания всех звонков: 00:55, принятых звонков: 00:41, непринятых звонков: 01:26 <br />
+      </div>
     </div>
     <div class="demo-tab-content">
-      Поступившие
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let newCall of dataAllCalls | slice:0:[max]">
+          <mat-expansion-panel-header [ngClass]="{'is-new-call': newCall.isNewCall === '1' }">
+            <mat-panel-title>
+              {{ newCall.externalNumber }}
+            </mat-panel-title>
+            <mat-panel-description>
+              {{ newCall.customerData.name }}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>Кому звонили: <b>{{ newCall.employeeData.name }}</b></p>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <div class="button-row">
+        <button mat-raised-button color="primary" (click)="toggle()">Показать еще 150 звонков</button>
+      </div>
     </div>
   </mat-tab>
   <mat-tab label="Совершенные">

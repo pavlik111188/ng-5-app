@@ -1,0 +1,65 @@
+"433736666": {
+"companyID": "14",
+"generalCallID": "433736666",
+"startTime": "1510678464",
+"callType": "0",
+"internalNumber": "",
+"internalAdditionalData": "",
+"externalNumber": "0630373160",
+"waitsec": 12,
+"billsec": "0",
+"disposition": "VM",
+"isNewCall": "1",
+"customerData": "",
+"employeeData": [],
+"pbxNumberData": {
+"number": "0443334875",
+"name": "Константин Худояров"
+},
+"historyData": [
+{
+"internalNumber": "",
+"internalAdditionalData": "",
+"employeeData": [],
+"waitsec": 12,
+"billsec": "0",
+"disposition": "VM"
+}
+]
+},
+
+"433721612": {
+"companyID": "14",
+"generalCallID": "433721612",
+"startTime": "1510676962",
+"callType": "0",
+"internalNumber": "720",
+"internalAdditionalData": "Очередь ОТП > ",
+"externalNumber": "0975656545",
+"waitsec": 7,
+"billsec": "130",
+"disposition": "ANSWER",
+"isNewCall": "0",
+"customerData": "",
+"employeeData": {
+"name": "Ирина Лисовенко",
+"email": "il@binotel.ua"
+},
+"pbxNumberData": {
+"number": "0678283285",
+"name": "ОТП Kиевстар"
+},
+"historyData": [
+{
+"internalNumber": "Очередь ОТП > 720",
+"internalAdditionalData": "",
+"employeeData": {
+"name": "Ирина Лисовенко",
+"email": "il@binotel.ua"
+},
+"waitsec": 7,
+"billsec": "130",
+"disposition": "ANSWER"
+}
+]
+},
