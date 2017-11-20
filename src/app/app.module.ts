@@ -7,6 +7,7 @@ import { MaterialModule } from './material.module';
 import { HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MomentModule } from 'angular2-moment';
 
 import { CallsService } from './services/calls.service';
 import { CookieService } from 'ngx-cookie-service';
@@ -35,7 +36,8 @@ import { LoginComponent } from './components/login/login.component';
     MaterialModule,
     HttpClientModule,
     HttpClientXsrfModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MomentModule
   ],
   providers: [CallsService, CookieService, AuthenticationService/*, {
     provide: HTTP_INTERCEPTORS,

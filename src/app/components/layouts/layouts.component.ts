@@ -33,6 +33,7 @@ export class LayoutsComponent implements OnInit {
 
   logout() {
     this.authenticationService.logout();
+    this.cookieService.delete('Auth');
     this.router.navigate(['/login']);
   }
 

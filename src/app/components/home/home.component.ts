@@ -2,6 +2,8 @@ import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { CallsService } from '../../services/calls.service';
 import { AuthenticationService } from '../../services/authentication.service';
 import { DispositionConst } from '../../consts/disposition.const';
+import { FormControl } from '@angular/forms';
+import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 
 @Component({
   selector: 'app-home',
@@ -25,6 +27,8 @@ export class HomeComponent implements OnInit {
   outgoingSuccessCount: number = 0;
   outgoingUnSuccessCount: number = 0;
   countLostCalls: number = 0;
+  startDate = new Date(1990, 0, 1);
+  endDate = new Date(1990, 0, 1);
 
   constructor(private callService: CallsService, private authenticationService: AuthenticationService) { }
 

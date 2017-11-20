@@ -10,7 +10,19 @@
         </mat-form-field>
         <button mat-fab class="show-stat-btn" (click)="getStat()">
           <mat-icon aria-label="Show statistic">sort</mat-icon>
-        </button>
+        </button>        
+      </mat-toolbar-row>
+      <mat-toolbar-row>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Выберите дату">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [matDatepicker]="pickerEnd" placeholder="Выберите дату">
+          <mat-datepicker-toggle matSuffix [for]="pickerEnd"></mat-datepicker-toggle>
+          <mat-datepicker #pickerEnd startView="year" [startAt]="endDate"></mat-datepicker>
+        </mat-form-field>
       </mat-toolbar-row>
       <div class="stat-block" *ngIf="showStat">
         Всех звонков за выбранный период: <b>{{ countAll }}</b>  из них уникальных: <b>{{ countUniqueNumbers }}</b> <br />
