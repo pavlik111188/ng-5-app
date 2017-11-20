@@ -17,12 +17,12 @@ export class LoginComponent implements OnInit {
 	email: string = '';
 	pass: string = '';
 	loginForm: FormGroup;
+	showError: boolean = false;
 
 	constructor(private authenticationService: AuthenticationService, private router: Router) { }
 
 	ngOnInit() {
 		this.createForm();
-		this.login();
 	}
 
 	private createForm() {
@@ -34,13 +34,18 @@ export class LoginComponent implements OnInit {
 	}
 
 	public login() {
-		this.auth = this.authenticationService.auth(this.loginForm.value.email, this.loginForm.value.password);
-			this.auth.subscribe(res => {
-				if (res == 'success') {
-					//this.router.navigate(['/']);
-				} else {
-					//console.log(res);
-				}
+		this.showError = false;
+		this.authenticationService.auth(this.loginForm.value.email, this.loginForm.value.password)
+		.subscribe(
+			(res) => {		
+			if (res == 'success') {
+				this.router.navigate(['/']);
+			} else {
+				this.showError = true;
+			}
+		},
+		(error) => {
+			console.log('error');
 		});
 	}
 

@@ -18,6 +18,7 @@
 	          <div [hidden]="!loginForm.controls['password'].errors.patternInvalid">Пароль должен быть минимум 10 символов.</div>
 	        </div>
 	      </mat-input-container>
+	      <div *ngIf="showError" class="error">Неверный логин или пароль</div>	    
 	    </form>
 	  </mat-card-content>
 	  <mat-card-actions align="end">

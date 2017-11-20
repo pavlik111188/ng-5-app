@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CallsService } from './services/calls.service';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthenticationService } from './services/authentication.service';
+import { MyHttpLogInterceptor } from './interfaces/http.interceptor';
 
 import { AppComponent } from './app.component';
 import { LayoutsComponent } from './components/layouts/layouts.component';
@@ -35,7 +37,11 @@ import { LoginComponent } from './components/login/login.component';
     HttpClientXsrfModule,
     ReactiveFormsModule
   ],
-  providers: [CallsService, CookieService, AuthenticationService],
+  providers: [CallsService, CookieService, AuthenticationService/*, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: MyHttpLogInterceptor,
+    multi: true,
+  }*/],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

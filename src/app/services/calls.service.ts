@@ -35,49 +35,6 @@ export class CallsService {
 
   constructor(private http: HttpClient) { }
 
-  getIncomingCallsForPeriod(): Observable<any> {
-    const params = {
-      logining: {
-        email: 'ps@binotel.ua',
-        password: 'rt3$)oJF1ydglcsIpO'
-      }
-    };
-
-    let headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8' });
-
-    //const params = '';
-    const url = `${this.domain}${this.allIncomingCallsSinceUrl}`;
-    /*return this.http.post<any>(
-        'https://my.binotel.ua',
-        params,
-        options: { headers, withCredentials: true, responseType: 'text' }).subscribe(
-        res => {
-          console.log(res.headers);
-        },
-        (err: HttpErrorResponse) => {
-          console.log(err.error);
-          console.log(err.name);
-          console.log(err.message);
-          console.log(err.status);          
-        }
-    );*/
-
-        let res;
-    res = this.http.post<any>('https://my.binotel.ua', params, { headers: headers, observe: 'response', responseType: 'text' as 'json', withCredentials: true }).subscribe(
-      (res) => {
-          console.log(res.headers);
-        },
-        (err: HttpErrorResponse) => {
-          console.log(err.error);
-          console.log(err.name);
-          console.log(err.message);
-          console.log(err.status);
-          
-        });
-    return res;
-
-  }
-
 
   getAllCalls(url: string): Observable<any> {
     let res;
@@ -94,7 +51,16 @@ export class CallsService {
   getLostCalls(): Observable<any> {
     let res;
     res = this.http.get<any>('./assets/json/list-of-lost-calls-today.json');
-    return res;
+    return new Observable(observer => {
+      this.http.get<any>('./assets/json/list-of-lost-calls-today.json').subscribe(
+        (res) => {
+          observer.next(res);    
+        },
+        (error) => {
+          observer.next(error);
+        }
+      )
+    });
   }
 
 }

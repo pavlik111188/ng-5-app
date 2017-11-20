@@ -16,22 +16,25 @@ import 'rxjs/add/observable/throw';
 @Injectable()
 export class MyHttpLogInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.log('processing request', request);
+    // console.log('processing request', request);
 
     const customReq = request.clone({
-      headers: request.headers.set('app-language', 'it')
+    	responseType: 'text' as 'json',
+    	withCredentials: true,
+     	headers: request.headers.set('Content-Type', 'application/x-www-form-urlencoded')
     });
 
     return next
       .handle(customReq)
       .do((ev: HttpEvent<any>) => {
         if (ev instanceof HttpResponse) {
-          console.log('processing response', ev);
+          // console.log('processing response', ev);
+          //console.log('customReq ', customReq);
         }
       })
       .catch(response => {
         if (response instanceof HttpErrorResponse) {
-          console.log('Processing http error', response);
+          // console.log('Processing http error', response);
         }
 
         return Observable.throw(response);
