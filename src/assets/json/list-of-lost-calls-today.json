@@ -1,0 +1,769 @@
+{
+  "status": "success",
+  "callDetails": {
+    "436041214": {
+      "companyID": "14",
+      "generalCallID": "436041214",
+      "startTime": "1510899479",
+      "callType": "0",
+      "internalNumber": "0443334444",
+      "internalAdditionalData": "",
+      "externalNumber": "0668185758",
+      "waitsec": 0,
+      "billsec": "0",
+      "disposition": "CHANUNAVAIL",
+      "isNewCall": "1",
+      "customerData": "",
+      "employeeData": {
+        "name": "Нерабочее время ОП"
+      },
+      "pbxNumberData": {
+        "number": "0442337218",
+        "name": "ОП 0800"
+      },
+      "historyData": [
+        {
+          "internalNumber": "0443334444",
+          "internalAdditionalData": "",
+          "employeeData": {
+            "name": "Нерабочее время ОП"
+          },
+          "waitsec": 0,
+          "billsec": "0",
+          "disposition": "CHANUNAVAIL"
+        }
+      ],
+      "comment": "не заказывала"
+    },
+    "436114475": {
+      "companyID": "14",
+      "generalCallID": "436114475",
+      "startTime": "1510904650",
+      "callType": "0",
+      "internalNumber": "882",
+      "internalAdditionalData": "",
+      "externalNumber": "0952753403",
+      "waitsec": 40,
+      "billsec": 0,
+      "disposition": "NOANSWER",
+      "isNewCall": "0",
+      "customerData": "",
+      "employeeData": [],
+      "pbxNumberData": {
+        "number": "0443334586",
+        "name": "Марина Васечко"
+      },
+      "historyData": [
+        {
+          "internalNumber": "882",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 20,
+          "billsec": "0",
+          "disposition": "NOANSWER"
+        },
+        {
+          "internalNumber": "882",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 20,
+          "billsec": "0",
+          "disposition": "NOANSWER"
+        },
+        {
+          "internalNumber": "999",
+          "internalAdditionalData": "",
+          "employeeData": {
+            "name": "TLS"
+          },
+          "waitsec": 0,
+          "billsec": "0",
+          "disposition": "CHANUNAVAIL"
+        }
+      ],
+      "comment": ""
+    },
+    "436198206": {
+      "companyID": "14",
+      "generalCallID": "436198206",
+      "startTime": "1510907594",
+      "callType": "0",
+      "internalNumber": "0932639180",
+      "internalAdditionalData": "",
+      "externalNumber": "0636285011",
+      "waitsec": 42,
+      "billsec": 0,
+      "disposition": "CANCEL",
+      "isNewCall": "0",
+      "customerData": "",
+      "employeeData": {
+        "name": "ЗН-HR"
+      },
+      "pbxNumberData": {
+        "number": "0443334604",
+        "name": "Иванна Голяк"
+      },
+      "historyData": [
+        {
+          "internalNumber": "0932639180",
+          "internalAdditionalData": "",
+          "employeeData": {
+            "name": "ЗН-HR"
+          },
+          "waitsec": 13,
+          "billsec": "0",
+          "disposition": "CANCEL"
+        },
+        {
+          "internalNumber": "810",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 20,
+          "billsec": "0",
+          "disposition": "NOANSWER"
+        },
+        {
+          "internalNumber": "917",
+          "internalAdditionalData": "",
+          "employeeData": {
+            "name": "Ангелина Максимова",
+            "email": "mx@binotel.ua"
+          },
+          "waitsec": 9,
+          "billsec": "0",
+          "disposition": "NOANSWER"
+        }
+      ],
+      "comment": ""
+    },
+    "436251492": {
+      "companyID": "14",
+      "generalCallID": "436251492",
+      "startTime": "1510909316",
+      "callType": "0",
+      "internalNumber": "735",
+      "internalAdditionalData": "",
+      "externalNumber": "0955226648",
+      "waitsec": 2,
+      "billsec": "0",
+      "disposition": "CANCEL",
+      "isNewCall": "1",
+      "customerData": "",
+      "employeeData": {
+        "name": "Александр Овод",
+        "email": "oa@binotel.ua"
+      },
+      "pbxNumberData": {
+        "number": "0443334444",
+        "name": "ОП Киев"
+      },
+      "historyData": [
+        {
+          "internalNumber": "735",
+          "internalAdditionalData": "",
+          "employeeData": {
+            "name": "Александр Овод",
+            "email": "oa@binotel.ua"
+          },
+          "waitsec": 2,
+          "billsec": "0",
+          "disposition": "CANCEL"
+        }
+      ],
+      "comment": ""
+    },
+    "436260588": {
+      "companyID": "14",
+      "generalCallID": "436260588",
+      "startTime": "1510909555",
+      "callType": "0",
+      "internalNumber": "927",
+      "internalAdditionalData": "",
+      "externalNumber": "0673146221",
+      "waitsec": 0,
+      "billsec": "0",
+      "disposition": "CHANUNAVAIL",
+      "isNewCall": "1",
+      "customerData": "",
+      "employeeData": {
+        "name": "Андрей Гринёв",
+        "email": "ag@binotel.ua"
+      },
+      "pbxNumberData": {
+        "number": "0443334583",
+        "name": "Андрей Гринёв"
+      },
+      "historyData": [
+        {
+          "internalNumber": "927",
+          "internalAdditionalData": "",
+          "employeeData": {
+            "name": "Андрей Гринёв",
+            "email": "ag@binotel.ua"
+          },
+          "waitsec": 0,
+          "billsec": "0",
+          "disposition": "CHANUNAVAIL"
+        }
+      ],
+      "comment": ""
+    },
+    "436278602": {
+      "companyID": "14",
+      "generalCallID": "436278602",
+      "startTime": "1510910066",
+      "callType": "0",
+      "internalNumber": "906",
+      "internalAdditionalData": "",
+      "externalNumber": "0675561556",
+      "waitsec": 0,
+      "billsec": "0",
+      "disposition": "CANCEL",
+      "isNewCall": "0",
+      "customerData": {
+        "id": "39143",
+        "name": "Авикдор BONZO"
+      },
+      "employeeData": {
+        "name": "Андрей Сильченко",
+        "email": "as@binotel.ua"
+      },
+      "pbxNumberData": {
+        "number": "0443334503",
+        "name": "Андрей Сильченко"
+      },
+      "historyData": [
+        {
+          "internalNumber": "906",
+          "internalAdditionalData": "",
+          "employeeData": {
+            "name": "Андрей Сильченко",
+            "email": "as@binotel.ua"
+          },
+          "waitsec": 0,
+          "billsec": "0",
+          "disposition": "CANCEL"
+        }
+      ],
+      "comment": ""
+    },
+    "436323093": {
+      "companyID": "14",
+      "generalCallID": "436323093",
+      "startTime": "1510911312",
+      "callType": "0",
+      "internalNumber": "913",
+      "internalAdditionalData": "",
+      "externalNumber": "Unknown",
+      "waitsec": 0,
+      "billsec": "0",
+      "disposition": "CHANUNAVAIL",
+      "isNewCall": "0",
+      "customerData": "",
+      "employeeData": {
+        "name": "Людмила Грицюк",
+        "email": "lg@binotel.ua"
+      },
+      "pbxNumberData": {
+        "number": "0442337214",
+        "name": "OLD Людмила Грицюк"
+      },
+      "historyData": [
+        {
+          "internalNumber": "913",
+          "internalAdditionalData": "",
+          "employeeData": {
+            "name": "Людмила Грицюк",
+            "email": "lg@binotel.ua"
+          },
+          "waitsec": 0,
+          "billsec": "0",
+          "disposition": "CHANUNAVAIL"
+        }
+      ],
+      "comment": ""
+    },
+    "436348365": {
+      "companyID": "14",
+      "generalCallID": "436348365",
+      "startTime": "1510911979",
+      "callType": "0",
+      "internalNumber": "882",
+      "internalAdditionalData": "",
+      "externalNumber": "0675658848",
+      "waitsec": 42,
+      "billsec": 0,
+      "disposition": "CANCEL",
+      "isNewCall": "0",
+      "customerData": {
+        "id": "453760",
+        "name": "VM Dmitriy UATOY"
+      },
+      "employeeData": [],
+      "pbxNumberData": {
+        "number": "0442337248",
+        "name": "OLD Вячеслав Михайлов"
+      },
+      "historyData": [
+        {
+          "internalNumber": "882",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 15,
+          "billsec": "0",
+          "disposition": "CANCEL"
+        },
+        {
+          "internalNumber": "882",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 20,
+          "billsec": "0",
+          "disposition": "NOANSWER"
+        },
+        {
+          "internalNumber": "931",
+          "internalAdditionalData": "",
+          "employeeData": {
+            "name": "Анастасия Петречко",
+            "email": "np@binotel.ua"
+          },
+          "waitsec": 7,
+          "billsec": "0",
+          "disposition": "NOANSWER"
+        }
+      ],
+      "comment": ""
+    },
+    "436358327": {
+      "companyID": "14",
+      "generalCallID": "436358327",
+      "startTime": "1510912252",
+      "callType": "0",
+      "internalNumber": "882",
+      "internalAdditionalData": "",
+      "externalNumber": "0994337397",
+      "waitsec": 25,
+      "billsec": 0,
+      "disposition": "CANCEL",
+      "isNewCall": "0",
+      "customerData": "",
+      "employeeData": [],
+      "pbxNumberData": {
+        "number": "0443334444",
+        "name": "ОП Киев"
+      },
+      "historyData": [
+        {
+          "internalNumber": "882",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 18,
+          "billsec": "0",
+          "disposition": "CANCEL"
+        },
+        {
+          "internalNumber": "750",
+          "internalAdditionalData": "",
+          "employeeData": {
+            "name": "Анна Терженель",
+            "email": "at@binotel.ua"
+          },
+          "waitsec": 7,
+          "billsec": "0",
+          "disposition": "NOANSWER"
+        }
+      ],
+      "comment": ""
+    },
+    "436361519": {
+      "companyID": "14",
+      "generalCallID": "436361519",
+      "startTime": "1510912349",
+      "callType": "0",
+      "internalNumber": "882",
+      "internalAdditionalData": "",
+      "externalNumber": "0674058343",
+      "waitsec": 68,
+      "billsec": 0,
+      "disposition": "NOANSWER",
+      "isNewCall": "0",
+      "customerData": "",
+      "employeeData": [],
+      "pbxNumberData": {
+        "number": "0443334504",
+        "name": "Ярослав Билодид"
+      },
+      "historyData": [
+        {
+          "internalNumber": "882",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 21,
+          "billsec": "0",
+          "disposition": "NOANSWER"
+        },
+        {
+          "internalNumber": "882",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 20,
+          "billsec": "0",
+          "disposition": "NOANSWER"
+        },
+        {
+          "internalNumber": "882",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 20,
+          "billsec": "0",
+          "disposition": "NOANSWER"
+        },
+        {
+          "internalNumber": "933",
+          "internalAdditionalData": "",
+          "employeeData": {
+            "name": "Ярослав Билодид",
+            "email": "bf@binotel.ua"
+          },
+          "waitsec": 7,
+          "billsec": "0",
+          "disposition": "NOANSWER"
+        }
+      ],
+      "comment": ""
+    },
+    "436395116": {
+      "companyID": "14",
+      "generalCallID": "436395116",
+      "startTime": "1510913468",
+      "callType": "0",
+      "internalNumber": "997",
+      "internalAdditionalData": "",
+      "externalNumber": "0679902365",
+      "waitsec": 1,
+      "billsec": "0",
+      "disposition": "CANCEL",
+      "isNewCall": "0",
+      "customerData": "",
+      "employeeData": {
+        "name": "Маргарита Конон",
+        "email": "mu@binotel.ua"
+      },
+      "pbxNumberData": {
+        "number": "0443334584",
+        "name": "Марго Конон"
+      },
+      "historyData": [
+        {
+          "internalNumber": "997",
+          "internalAdditionalData": "",
+          "employeeData": {
+            "name": "Маргарита Конон",
+            "email": "mu@binotel.ua"
+          },
+          "waitsec": 1,
+          "billsec": "0",
+          "disposition": "CANCEL"
+        }
+      ],
+      "comment": ""
+    },
+    "436404193": {
+      "companyID": "14",
+      "generalCallID": "436404193",
+      "startTime": "1510913785",
+      "callType": "0",
+      "internalNumber": "883",
+      "internalAdditionalData": "",
+      "externalNumber": "0961962676",
+      "waitsec": 137,
+      "billsec": 0,
+      "disposition": "CANCEL",
+      "isNewCall": "0",
+      "customerData": "",
+      "employeeData": [],
+      "pbxNumberData": {
+        "number": "0678283285",
+        "name": "ОТП Kиевстар"
+      },
+      "historyData": [
+        {
+          "internalNumber": "883",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 17,
+          "billsec": "0",
+          "disposition": "CANCEL"
+        },
+        {
+          "internalNumber": "Очередь ОТП",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 120,
+          "billsec": "0",
+          "disposition": "NOANSWER"
+        }
+      ],
+      "comment": ""
+    },
+    "436416959": {
+      "companyID": "14",
+      "generalCallID": "436416959",
+      "startTime": "1510914197",
+      "callType": "0",
+      "internalNumber": "937",
+      "internalAdditionalData": "",
+      "externalNumber": "0442476992",
+      "waitsec": 0,
+      "billsec": "0",
+      "disposition": "CHANUNAVAIL",
+      "isNewCall": "1",
+      "customerData": "",
+      "employeeData": {
+        "name": "Александр Пак",
+        "email": "ap@binotel.ua"
+      },
+      "pbxNumberData": {
+        "number": "0443334512",
+        "name": "Александр Пак"
+      },
+      "historyData": [
+        {
+          "internalNumber": "937",
+          "internalAdditionalData": "",
+          "employeeData": {
+            "name": "Александр Пак",
+            "email": "ap@binotel.ua"
+          },
+          "waitsec": 0,
+          "billsec": "0",
+          "disposition": "CHANUNAVAIL"
+        }
+      ],
+      "comment": ""
+    },
+    "436434113": {
+      "companyID": "14",
+      "generalCallID": "436434113",
+      "startTime": "1510914717",
+      "callType": "0",
+      "internalNumber": "882",
+      "internalAdditionalData": "",
+      "externalNumber": "0442907465",
+      "waitsec": 18,
+      "billsec": 0,
+      "disposition": "CANCEL",
+      "isNewCall": "0",
+      "customerData": {
+        "id": "9235212",
+        "name": "Нова пошта"
+      },
+      "employeeData": [],
+      "pbxNumberData": {
+        "number": "0443334589",
+        "name": "Александр Пархомюк"
+      },
+      "historyData": [
+        {
+          "internalNumber": "882",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 11,
+          "billsec": "0",
+          "disposition": "CANCEL"
+        },
+        {
+          "internalNumber": "984",
+          "internalAdditionalData": "",
+          "employeeData": {
+            "name": "Александр Пархомюк",
+            "email": "av@binotel.ua"
+          },
+          "waitsec": 7,
+          "billsec": "0",
+          "disposition": "NOANSWER"
+        }
+      ],
+      "comment": ""
+    },
+    "436434279": {
+      "companyID": "14",
+      "generalCallID": "436434279",
+      "startTime": "1510914723",
+      "callType": "0",
+      "internalNumber": "",
+      "internalAdditionalData": "",
+      "externalNumber": "0077273499890",
+      "waitsec": 249,
+      "billsec": 0,
+      "disposition": "VM",
+      "isNewCall": "0",
+      "customerData": "",
+      "employeeData": [],
+      "pbxNumberData": {
+        "number": "77273493263",
+        "name": "ОТП Казахстан"
+      },
+      "historyData": [
+        {
+          "internalNumber": "",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 8,
+          "billsec": "0",
+          "disposition": "VM"
+        },
+        {
+          "internalNumber": "883",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 60,
+          "billsec": "0",
+          "disposition": "NOANSWER"
+        },
+        {
+          "internalNumber": "883",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 61,
+          "billsec": "0",
+          "disposition": "BUSY"
+        },
+        {
+          "internalNumber": "Очередь ОТП",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 120,
+          "billsec": "0",
+          "disposition": "NOANSWER"
+        }
+      ],
+      "comment": ""
+    },
+    "436440369": {
+      "companyID": "14",
+      "generalCallID": "436440369",
+      "startTime": "1510914878",
+      "callType": "0",
+      "internalNumber": "Очередь ОТП",
+      "internalAdditionalData": "",
+      "externalNumber": "0632335855",
+      "waitsec": 14,
+      "billsec": "0",
+      "disposition": "CHANUNAVAIL",
+      "isNewCall": "0",
+      "customerData": "",
+      "employeeData": [],
+      "pbxNumberData": {
+        "number": "0443334023",
+        "name": "ОТП 044"
+      },
+      "historyData": [
+        {
+          "internalNumber": "Очередь ОТП",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 14,
+          "billsec": "0",
+          "disposition": "CHANUNAVAIL"
+        }
+      ],
+      "comment": ""
+    },
+    "436441784": {
+      "companyID": "14",
+      "generalCallID": "436441784",
+      "startTime": "1510914917",
+      "callType": "0",
+      "internalNumber": "Очередь ОТП",
+      "internalAdditionalData": "",
+      "externalNumber": "0487361078",
+      "waitsec": 66,
+      "billsec": "0",
+      "disposition": "CHANUNAVAIL",
+      "isNewCall": "0",
+      "customerData": "",
+      "employeeData": [],
+      "pbxNumberData": {
+        "number": "0443334023",
+        "name": "ОТП 044"
+      },
+      "historyData": [
+        {
+          "internalNumber": "Очередь ОТП",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 66,
+          "billsec": "0",
+          "disposition": "CHANUNAVAIL"
+        }
+      ],
+      "comment": ""
+    },
+    "436443437": {
+      "companyID": "14",
+      "generalCallID": "436443437",
+      "startTime": "1510914959",
+      "callType": "0",
+      "internalNumber": "Очередь ОТП",
+      "internalAdditionalData": "",
+      "externalNumber": "0663667015",
+      "waitsec": 106,
+      "billsec": "0",
+      "disposition": "CHANUNAVAIL",
+      "isNewCall": "0",
+      "customerData": {
+        "id": "9414630",
+        "name": "ТОВ Карпаты Автоцентр"
+      },
+      "employeeData": [],
+      "pbxNumberData": {
+        "number": "0504719599",
+        "name": "ОТП МТС"
+      },
+      "historyData": [
+        {
+          "internalNumber": "Очередь ОТП",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 106,
+          "billsec": "0",
+          "disposition": "CHANUNAVAIL"
+        }
+      ],
+      "comment": ""
+    },
+    "436444961": {
+      "companyID": "14",
+      "generalCallID": "436444961",
+      "startTime": "1510915004",
+      "callType": "0",
+      "internalNumber": "Очередь ОТП",
+      "internalAdditionalData": "",
+      "externalNumber": "0503304984",
+      "waitsec": 9,
+      "billsec": "0",
+      "disposition": "CHANUNAVAIL",
+      "isNewCall": "0",
+      "customerData": "",
+      "employeeData": [],
+      "pbxNumberData": {
+        "number": "0504719599",
+        "name": "ОТП МТС"
+      },
+      "historyData": [
+        {
+          "internalNumber": "Очередь ОТП",
+          "internalAdditionalData": "",
+          "employeeData": [],
+          "waitsec": 9,
+          "billsec": "0",
+          "disposition": "CHANUNAVAIL"
+        }
+      ],
+      "comment": ""
+    }
+  },
+  "signature": "6671d1fdb75340e54bf56240ce335a11"
+}

@@ -33,6 +33,7 @@
 }*/
 .is-new-call {
     border-left: solid 5px #cfd5e5;
+    padding-left: 19px !important;
 }
 .show-stat-btn {
     margin-left: 20px;

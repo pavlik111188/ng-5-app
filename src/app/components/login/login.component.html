@@ -1,0 +1,27 @@
+<div class="container">
+	<mat-card class="card" *ngIf="loginForm">
+	  <mat-card-title>Авторизация</mat-card-title>
+	  <mat-card-content>
+	    <form [formGroup]="loginForm">
+	      <mat-input-container [ngClass]="{'error': loginForm.controls['email'].errors && !loginForm.controls['email'].pristine}" dividerColor="{{loginForm.controls['email'].errors && !loginForm.controls['email'].pristine ? 'warn' : 'primary'}}">
+	        <input type="email" matInput formControlName="email" placeholder="Email" required>
+	        <div *ngIf="loginForm.controls['email'].errors && !loginForm.controls['email'].pristine" class="error-msg">
+	          <div [hidden]="!loginForm.controls['email'].errors.required">Email обязателен.</div>
+	          <div [hidden]="!loginForm.controls['email'].errors.patternInvalid">Не корректный Email.</div>
+	        </div>
+	      </mat-input-container>
+	      <mat-input-container [ngClass]="{'error': loginForm.controls['password'].errors && !loginForm.controls['password'].pristine}"
+	        dividerColor="{{loginForm.controls['password'].errors && !loginForm.controls['password'].pristine ? 'warn' : 'primary'}}">
+	        <input type="password" matInput formControlName="password" placeholder="Пароль" required>
+	        <div *ngIf="loginForm.controls['password'].errors && !loginForm.controls['password'].pristine" class="error-msg">
+	          <div [hidden]="!loginForm.controls['password'].errors.required">Пароль обязателен.</div>
+	          <div [hidden]="!loginForm.controls['password'].errors.patternInvalid">Пароль должен быть минимум 10 символов.</div>
+	        </div>
+	      </mat-input-container>
+	    </form>
+	  </mat-card-content>
+	  <mat-card-actions align="end">
+	    <button mat-raised-button color="primary" [disabled]="loginForm.invalid" (click)="login()">Войти</button>
+	  </mat-card-actions>
+	</mat-card>
+</div>
