@@ -49,12 +49,4 @@ export class LoginComponent implements OnInit {
 		});
 	}
 
-	/*login() {
-		console.log(this.email, this.pass);
-		this.auth = this.authenticationService.auth('ps@binotel.ua', 'rt3$)oJF1ydglcsIpO');
-			this.auth.subscribe(res => {
-			console.log(res);
-		});
-	}*/
-
 }

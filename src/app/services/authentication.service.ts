@@ -53,12 +53,6 @@ export class AuthenticationService {
       }
     };
 	const params = '';
-	const params = {
-      logining: {
-        email: 'ps@binotel.ua',
-        password: 'rt3$)oJF1ydglcsIpO'
-      }
-    };
     let headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
     const url = `${this.domain}`;
     return new Observable(observer => {
