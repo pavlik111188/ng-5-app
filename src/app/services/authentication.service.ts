@@ -20,7 +20,6 @@ export class AuthenticationService {
 	    return new Observable(observer => {
 	    	this.http.post<any>(url, params, { headers: headers, observe: 'response', responseType: 'text' as 'json', withCredentials: true }).subscribe(
 			(res) => {
-				console.log(res.url);
 				if (res.url.indexOf('action=badPassword') !== -1) {
 					observer.next('unauthorized');				
 				} else {

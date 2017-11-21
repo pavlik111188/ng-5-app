@@ -23,6 +23,10 @@
 }
 mat-card{
     width: 20em;
+    margin-top: 65px;
+}
+.mat-card{
+    margin-top: 65px;
 }
 form {
     display: flex;

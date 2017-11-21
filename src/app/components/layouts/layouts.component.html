@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span class="logo-binotel"><img src="./assets/img/logo-my.png"></span>
-    <button mat-icon-button [matMenuTriggerFor]="menu">
+    <span class="logo-binotel"><img src="./assets/img/logo-my.png"> <span>{{ trader_id }}</span></span>
+    <button *ngIf="logged" mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>more_vert</mat-icon>
     </button>
     <mat-menu #menu="matMenu">

@@ -1,8 +1,27 @@
+.mat-tab-header {
+    position: fixed !important;
+    top: 56px;
+    width: 100%;
+    z-index: 5;
+    background: #fff;
+}
+.mat-toolbar-row-new {
+    position: fixed;
+    top: 105px;
+    width: 100%;
+    background: #fff;
+    z-index: 5;
+}
 .demo-tab-content {
     padding: 10px;
+    margin-top: 210px;
 }
 .mat-expansion-panel-header-title {
     max-width: 45%;
+    font: 15px/15px Open sans,Ubuntu,Arial;
+    font-weight: 600;
+    color: #000;
+    cursor: pointer;
 }
 .mat-expansion-panel-header-description, .mat-expansion-panel-header-title {
     display: inline !important;
@@ -14,6 +33,7 @@
 }
 .mat-expansion-panel-header {
     font-size: 13px;
+    position: relative;
 }
 .button-row {
     padding: 10px;
@@ -22,7 +42,7 @@
 .mat-expansion-panel-body p {
     margin: 0;
     font-size: 13px;
-    line-height: 1;
+    line-height: 20px;
 }
 /*
 .mat-select-content{
@@ -32,8 +52,13 @@
     width: 200px !important;
 }*/
 .is-new-call {
-    border-left: solid 5px #cfd5e5;
-    padding-left: 19px !important;
+    position: absolute;
+    display: block;
+    left: 0;
+    height: 48px;
+    top: 0;
+    width: 5px;
+    background: #cfd5e5;
 }
 .show-stat-btn {
     margin-left: 20px;
@@ -48,4 +73,33 @@
 .stat-block {
     font-size: 13px;
     padding: 10px;
+}
+.success, .unsuccess {
+    position: absolute;
+    display: block;
+    left: 5px;
+    height: 48px;
+    top: 0;
+    width: 5px;
+    background: #8fc7c1;
+}
+.unsuccess {
+    background: #ec929e;
+}
+.btn-area > span > button {
+    background: none;
+    width: 50px;
+    color: #cccccc !important;
+}
+.btn-area > span > button.nav-active mat-icon {
+    color: #8f9ec3 !important;
+}
+.form-datepicker {
+    margin-right: 15px;
+}
+span.space-before:before {
+    content: " ";
+}
+.number {
+
 }

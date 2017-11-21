@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../../services/authentication.service';
 import { Observable } from 'rxjs/Observable';
@@ -27,7 +27,6 @@ export class LoginComponent implements OnInit {
 
 	private createForm() {
 	    this.loginForm = new FormGroup({
-	      // tslint:disable-next-line
 	      email: new FormControl('', [Validators.required, patternValidator(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
 	      password: new FormControl('', [Validators.required, patternValidator(/^.{10,}$/)]),
 	    });
