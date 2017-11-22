@@ -19,6 +19,7 @@ import { LayoutsComponent } from './components/layouts/layouts.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { FileComponent } from './components/file/file.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { LoginComponent } from './components/login/login.component';
     LayoutsComponent,
     PageNotFoundComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    FileComponent
   ],
   imports: [
     BrowserModule,

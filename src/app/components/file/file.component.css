@@ -1,0 +1,19 @@
+.block {
+	padding: 60px 10px;
+}
+audio {
+	width: 100%;
+}
+.mat-input-element {
+	width: 80%;
+	font-size: 13px !important;
+}
+.mat-form-field {
+	width: 100%;
+}
+.mat-input-element:disabled {
+    color: rgba(0, 0, 0, 0.8);
+}
+mat-card {
+	margin-bottom: 15px;
+}

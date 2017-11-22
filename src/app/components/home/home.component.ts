@@ -41,16 +41,16 @@ export class HomeComponent implements OnInit {
   Math: any;
   date = new FormControl(new Date());
   serializedDate = new FormControl((new Date()).toISOString());
+  callType: string = '';
 
   constructor(private callService: CallsService, private authenticationService: AuthenticationService) {
     this.Math = Math;
   }
 
   ngOnInit() {
-    this.getAllCalls('Поступившие');
+    this.getAllCalls(0);
     this.getAllEmployes();
     this.getCountLostCalls();
-    //this.prepareTelephoneNumberWithSpan('0443334444');
   }
 
   toggle(): void {
@@ -90,9 +90,11 @@ export class HomeComponent implements OnInit {
     this.durationAllWaitCalls = 0;
     this.averageSuccessWaitCalls = 0;
     this.averageUnSuccessWaitCalls = 0;
+    this.callType = '';
     switch (tabText) {
       case 0: {
         url = './assets/json/incoming-calls-for-period.json';
+        this.callType = 'incoming';
         break;
       }
       case 1: {
@@ -178,7 +180,7 @@ export class HomeComponent implements OnInit {
       yyyy = d.getFullYear(),
       mm = ('0' + (d.getMonth() + 1)).slice(-2),  // Months are zero based. Add leading 0.
       dd = ('0' + d.getDate()).slice(-2),      // Add leading 0.
-      hh = ('0' + d.getHours()).slice(-2),
+      hh = parseInt(('0' + d.getHours()).slice(-2)),
       h = hh,
       min = ('0' + d.getMinutes()).slice(-2),    // Add leading 0.
       ampm = 'AM',
@@ -205,32 +207,33 @@ export class HomeComponent implements OnInit {
       str = 'Aonymous';
     }
     str = str.toString();
-    //if (!isNaN(str)) {
-      
       if (str.length === 7) {
-        str = str.substring(0,3) + '<span class="space-before">' + str.substring(3,2) + '</span><span class="space-before">' + str.substring(5,2) + '</span>';
+        str = str.substr(0,3) + '<span class="space-before">' + str.substr(3,2) + '</span><span class="space-before">' + str.substr(5,2) + '</span>';
       } else if (str.length === 9) {
-        str = str.substring(0,3) + '<span class="space-before">' + str.substring(3,3) + '</span><span class="space-before">' + str.substring(6,3) + '</span>';
+        str = str.substr(0,3) + '<span class="space-before">' + str.substr(3,3) + '</span><span class="space-before">' + str.substr(6,3) + '</span>';
       } else if (str.length === 10) {
-        str = str.substring(0,3) + '<span class="space-before">' + str.substring(3,3) + '</span><span class="space-before">' + str.substring(6,2) + '</span><span class="space-before">' + str.substring(8,2) + '</span>';
+        str = str.substr(0,3) + '<span class="space-before">' + str.substr(4,3) + '</span><span class="space-before">' + str.substr(6,2) + '</span><span class="space-before">' + str.substr(8,2) + '</span>';
       } else if (str.length >= 11) {
-        if (str.substring(0,2) === '00' && str.length >= 12) {
-          str = str.substring(0,2) + '<span class="space-before">' + str.substring(2,str.length-12) + '</span><span class="space-before">' + str.substring(-10,3) + '</span><span class="space-before">' + str.substring(-7,3) + '</span><span class="space-before">' + str.substring(-4,2) + '</span><span class="space-before">' + str.substring(-2,2) + '</span>';
-        } else if (str.substring(0,3) === '810') {
-          str = str.substring(0,3) + '<span class="space-before">' + str.substring(3,str.length-13) + '</span><span class="space-before">' + str.substring(-10,3) + '</span><span class="space-before">' + str.substring(-7,3) + '</span><span class="space-before">' + str.substring(-4,2) + '</span><span class="space-before">' + str.substring(-2,2) + '</span>';
+        if (str.substr(0,2) === '00' && str.length >= 12) {
+          str = str.substr(0,2) + '<span class="space-before">' + str.substr(2,str.length-12) + '</span><span class="space-before">' + str.substr(-10,3) + '</span><span class="space-before">' + str.substr(-7,3) + '</span><span class="space-before">' + str.substr(-4,2) + '</span><span class="space-before">' + str.substr(-2,2) + '</span>';
+        } else if (str.substr(0,3) === '810') {
+          str = str.substr(0,3) + '<span class="space-before">' + str.substr(3,str.length-13) + '</span><span class="space-before">' + str.substr(-10,3) + '</span><span class="space-before">' + str.substr(-7,3) + '</span><span class="space-before">' + str.substr(-4,2) + '</span><span class="space-before">' + str.substr(-2,2) + '</span>';
         } else {
-          str = str.substring(0,str.length-10) + '<span class="space-before">' + str.substring(-10, 3) + '</span><span class="space-before">' + str.substring(-7,3) + '</span><span class="space-before">' + str.substring(-4,2) + '</span><span class="space-before">' + str.substring(-2,2) + '</span>';
+          str = str.substr(0,str.length-10) + '<span class="space-before">' + str.substr(-10, 3) + '</span><span class="space-before">' + str.substr(-7,3) + '</span><span class="space-before">' + str.substr(-4,2) + '</span><span class="space-before">' + str.substr(-2,2) + '</span>';
         }
       }
-   // }
-    /* SIM pair with A prefix */
-    //if (!isNaN(str.substring(1))) {
-     // str = str.toString();
       if (str.length === 11) {
-        str = str.substring(0,1) + '<span class="space-before">' + str.substring(1,3) + '</span><span class="space-before">' + str.substring(4,3) + '</span><span class="space-before">' + str.substring(7,2) + '</span>' + '</span><span class="space-before">' + str.substring(9,2) + '</span>';
+        str = str.substr(0,1) + '<span class="space-before">' + str.substr(1,3) + '</span><span class="space-before">' + str.substr(4,3) + '</span><span class="space-before">' + str.substr(7,2) + '</span>' + '</span><span class="space-before">' + str.substr(9,2) + '</span>';
       }
       return str;
-    //}
+  }
+
+  // callDate=18-03_14-11-2017
+  generateCallDate(timestamp) {
+    let str = this.convertTimestamp(timestamp, 'time') + '_' + this.convertTimestamp(timestamp, 'full');
+    str = str.replace(/\./g, '-');
+    str = str.replace(':', '-');
+    return str;
   }
 
   ngOnDestroy() {

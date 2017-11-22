@@ -1,0 +1,13 @@
+<p class="block">
+	<mat-card>
+		<audio id="playback-audio-player" controls="" autoplay="none" [src]="audio_src"></audio>
+	</mat-card>
+	<mat-card>
+		<mat-form-field>
+			<input matInput placeholder="Ссылка на файл (для пользователей с доступом в Личный кабинет MyBusiness)" disabled [value]="audio_src">
+			<button mat-icon-button matSuffix><mat-icon>content_copy</mat-icon></button>
+		</mat-form-field>
+	</mat-card>
+
+
+</p>

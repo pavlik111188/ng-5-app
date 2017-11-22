@@ -86,6 +86,9 @@
 .unsuccess {
     background: #ec929e;
 }
+.btn-area {
+    text-align: center;
+}
 .btn-area > span > button {
     background: none;
     width: 50px;
@@ -102,4 +105,56 @@ span.space-before:before {
 }
 .number {
 
+}
+.actions-block-with-number {
+    height: 50px;
+    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    width: 100%;
+}
+.tf-button {
+    cursor: pointer;
+    -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+    width: 100%;
+}
+.icon {
+    background-color: #6e8ab5;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+.icon mat-icon {
+    color: #fff;
+}
+.call > .icon mat-icon {
+    -ms-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+    
+}
+.tf-button > .icon > .mat-icon-button {
+    width: 100%;
+    height: 50px;
+}
+.calls > button svg {
+    height: 27px;
+    width: 30px;
+}
+.calls > button svg path {
+    fill: #fff;
+}
+.sms > button {
+    -webkit-transition: opacity .25s;
+    -moz-transition: opacity .25s;
+    -o-transition: opacity .25s;
+    -ms-transition: opacity .25s;
+    transition: opacity .25s;
+    opacity: .9;
+    font: 400 26px/62px Elektra Light Pro Regular,Ubuntu,Arial;
+    color: #fff;
+    line-height: 1;
 }

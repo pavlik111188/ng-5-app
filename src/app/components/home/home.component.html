@@ -8,7 +8,7 @@
             <mat-option *ngFor="let depart of departs; let i = index" [value]="depart">{{depart}}</mat-option>
           </mat-select>
         </mat-form-field>
-        <button mat-fab class="show-stat-btn" (click)="getStat()">
+        <button mat-icon-button class="show-stat-btn" (click)="getStat()">
           <mat-icon aria-label="Show statistic">sort</mat-icon>
         </button>        
       </mat-toolbar-row>
@@ -35,7 +35,6 @@
         Среднее время ожидания всех звонков: <b>{{ secondsToTime(averageAllWaitCalls) }}</b>, 
         принятых звонков: <b>{{ secondsToTime(averageSuccessWaitCalls) }}</b>, 
         непринятых звонков: <b>{{ secondsToTime(averageUnSuccessWaitCalls) }}</b> <br />
-        <!-- 044<span class="space-before">333</span><span class="space-before">44</span><span class="space-before">44</span> -->
       </div>
     </div>
     <div class="demo-tab-content">
@@ -46,13 +45,14 @@
             <span *ngIf="successDesp.indexOf(newCall.disposition) == '-1'" class="unsuccess"></span>
             <span *ngIf="successDesp.indexOf(newCall.disposition) != '-1'" class="success"></span>
             <mat-panel-title [innerHTML]="prepareTelephoneNumberWithSpan(newCall.externalNumber)">
-
             </mat-panel-title>
             <mat-panel-description>
               {{ newCall.customerData.name }}
             </mat-panel-description>
           </mat-expansion-panel-header>
-          <p>Кому звонили: <b>{{ newCall.employeeData.name }}</b></p>
+          <p>Кому звонили: <b>{{ newCall.employeeData.name }}</b> 
+            <span *ngIf="newCall.internalNumber">(<span [innerHTML]="prepareTelephoneNumberWithSpan(newCall.internalNumber)"></span>)</span>
+          </p>
           <p>Ожидание: <b>{{ newCall.waitsec != '0' ? secondsToTime(newCall.waitsec) : '' }}</b></p>
           <p>Длительность разговора: <b>{{ newCall.billsec != '0' ? secondsToTime(newCall.billsec) : '' }}</b></p>
           <p>Время и дата: <b>{{ convertTimestamp(newCall.startTime,'time') }} &nbsp;&nbsp;&nbsp;&nbsp; {{ convertTimestamp(newCall.startTime,'full') }}</b></p>
@@ -61,10 +61,59 @@
               <button mat-icon-button [ngClass]="{'nav-active': newCall.isNewCall === '1' }">
                 <mat-icon aria-label="Comment">mode_comment</mat-icon>
               </button>
-              <button mat-icon-button *ngIf="successDesp.indexOf(newCall.disposition) != '-1'">
+              <button mat-icon-button *ngIf="successDesp.indexOf(newCall.disposition) != '-1'" [routerLink]="['/file', newCall.generalCallID, generateCallDate(newCall.startTime), newCall.externalNumber, callType]">
                 <mat-icon aria-label="Record">volume_up</mat-icon>
               </button>
             </span>
+          </p>
+          <p class="actions-block-with-number">
+            <mat-grid-list cols="5" rowHeight="50px">              
+              <mat-grid-tile>
+                <span class="tf-button call">
+                  <div class="icon">
+                    <button mat-icon-button>
+                      <mat-icon aria-label="Call">call</mat-icon>
+                    </button>
+                  </div>
+                </span>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <span class="tf-button">
+                  <div class="icon calls">
+                    <button mat-icon-button>
+                      <svg version="1.1" baseProfile="basic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19.009 17.002" xml:space="preserve"><g><path fill-rule="evenodd" clip-rule="evenodd" d="M4.107,0.002H1.117C0.743-0.027,0.084,0.343,0.084,0.76c0,0-0.189,2.252,0,3.845 C0.233,5.833,0.429,4.402,0.429,8.43c0,5.099-0.345,2.322-0.345,4.676c0,1.25,0,3.186,0,3.186c0,0.42,0.671,0.71,1.072,0.71h2.951 c0.402,0,1.139-0.29,1.139-0.71c0,0,0-1.829,0-3.186c0-2.027-0.409,0.068-0.409-4.676c0-3.054,0.25-2.925,0.409-4.177 c0.185-1.457,0-3.544,0-3.544C5.102,0.143,4.509,0.002,4.107,0.002z M18.278,0.955H6.637c-0.404,0-0.73,0.341-0.73,0.761v14.061 c0,0.42,0.326,0.76,0.73,0.76h11.641c0.406,0,0.73-0.34,0.73-0.76V1.716C19.009,1.296,18.684,0.955,18.278,0.955z M10.861,14.792 H8.894v-1.82h1.966V14.792z M10.861,12.313H8.894v-1.819h1.966V12.313z M10.861,9.836H8.894V8.013h1.966V9.836z M13.443,14.792 h-1.967v-1.82h1.967V14.792z M13.443,12.313h-1.967v-1.819h1.967V12.313z M13.443,9.836h-1.967V8.013h1.967V9.836z M16.024,14.792 h-1.968v-1.82h1.968V14.792z M16.024,12.313h-1.968v-1.819h1.968V12.313z M16.024,9.836h-1.968V8.013h1.968V9.836z M16.6,6.406 H8.342V2.868H16.6V6.406z"></path></g></svg>
+                    </button>
+                  </div>
+                </span>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <span class="tf-button">
+                  <div class="icon sms">
+                    <button mat-icon-button>
+                      SMS
+                    </button>
+                  </div>
+                </span>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <span class="tf-button">
+                  <div class="icon">
+                    <button mat-icon-button>
+                      <mat-icon>person</mat-icon>
+                    </button>
+                  </div>
+                </span>
+              </mat-grid-tile>
+              <mat-grid-tile>
+                <span class="tf-button">
+                  <div class="icon sms">
+                    <button mat-icon-button>
+                      CRM
+                    </button>
+                  </div>
+                </span>
+              </mat-grid-tile>
+            </mat-grid-list>
           </p>
         </mat-expansion-panel>
       </mat-accordion>
