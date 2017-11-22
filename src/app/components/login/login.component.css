@@ -32,9 +32,6 @@ form {
     display: flex;
     flex-direction: column;
 }
-.error {
-  color: red;
-}
 .error-msg {
   display: block;
   position: absolute;

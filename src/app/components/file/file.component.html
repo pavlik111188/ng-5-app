@@ -5,9 +5,24 @@
 	<mat-card>
 		<mat-form-field>
 			<input matInput placeholder="Ссылка на файл (для пользователей с доступом в Личный кабинет MyBusiness)" disabled [value]="audio_src">
-			<button mat-icon-button matSuffix><mat-icon>content_copy</mat-icon></button>
+			<button mat-icon-button matSuffix ngxClipboard [cbContent]="audio_src" (cbOnSuccess)="isCopied1 = true" [class.btn-success]= "isCopied1"><mat-icon>content_copy</mat-icon></button>
 		</mat-form-field>
 	</mat-card>
-
-
+	<mat-card>
+		<mat-form-field>
+			<input matInput placeholder="Отправить на имейл" [value]="email">
+		</mat-form-field>
+		<div class="error">Некорректный Email</div>
+		<button mat-raised-button color="primary" (click)="postToEmail()">Отправить</button>
+	</mat-card>
 </p>
+<!-- <form [formGroup]="loginForm">
+	      <mat-input-container [ngClass]="{'error': loginForm.controls['email'].errors && !loginForm.controls['email'].pristine}" dividerColor="{{loginForm.controls['email'].errors && !loginForm.controls['email'].pristine ? 'warn' : 'primary'}}">
+	        <input type="email" matInput formControlName="email" placeholder="Email" required>
+	        <div *ngIf="loginForm.controls['email'].errors && !loginForm.controls['email'].pristine" class="error-msg">
+	          <div [hidden]="!loginForm.controls['email'].errors.required">Email обязателен.</div>
+	          <div [hidden]="!loginForm.controls['email'].errors.patternInvalid">Не корректный Email.</div>
+	        </div>
+	      </mat-input-container>
+	      <div *ngIf="showError" class="error">Неверный Email</div>	    
+	    </form> -->

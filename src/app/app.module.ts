@@ -8,10 +8,12 @@ import { HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MomentModule } from 'angular2-moment';
+import { ClipboardModule } from 'ngx-clipboard';
 
 import { CallsService } from './services/calls.service';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthenticationService } from './services/authentication.service';
+import { FileService } from './services/file.service';
 import { MyHttpLogInterceptor } from './interfaces/http.interceptor';
 
 import { AppComponent } from './app.component';
@@ -39,9 +41,10 @@ import { FileComponent } from './components/file/file.component';
     HttpClientModule,
     HttpClientXsrfModule,
     ReactiveFormsModule,
-    MomentModule
+    MomentModule,
+    ClipboardModule
   ],
-  providers: [CallsService, CookieService, AuthenticationService/*, {
+  providers: [CallsService, CookieService, AuthenticationService, FileService/*, {
     provide: HTTP_INTERCEPTORS,
     useClass: MyHttpLogInterceptor,
     multi: true,

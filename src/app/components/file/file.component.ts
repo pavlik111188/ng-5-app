@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FileService } from '../../services/file.service';
 
 @Component({
   moduleId: module.id,
@@ -18,8 +19,10 @@ export class FileComponent implements OnInit {
 	link: string = '';
 	link_hear: string = '';
 	audio_src: string = '';
+	email: string = '';
+	showError: boolean = false;
 
-	constructor(private router: ActivatedRoute) { }
+	constructor(private router: ActivatedRoute, private fileService: FileService) { }
 
 	ngOnInit() {
 		this.router.params.subscribe(params => {
@@ -30,25 +33,15 @@ export class FileComponent implements OnInit {
 			this.link_hear = 'https://my.binotel.ua/?module=cdrs&action=generateFile&fileName=' + this.id + '.mp3&callDate=' + this.callDate + '&customerNumber=' + this.customerNumber + '&callType=' + this.callType;
 		  	this.audio_src = 'https://my.binotel.ua/?module=cdrs&action=generateFile&fileName=' + this.id + '.mp3&callDate=' + this.callDate + '&customerNumber=' + this.customerNumber + '&callType=' + this.callType;
 		  	console.log(params);
+		  	//this.postToEmail();
 		});
 	}
 
-	public logError( error: Error ) : void {
+	postToEmail() {
+		
+		/*this.fileService.postToEmail(this.email, this.id).subscribe(res => {
 
-        console.group( "Clipboard Error" );
-        console.error( error );
-        console.groupEnd();
-
-    }
-
-
-    // I log Clipboard "copy" successes.
-    public logSuccess( value: string ) : void {
-
-        console.group( "Clipboard Success" );
-        console.log( value );
-        console.groupEnd();
-
-    }
+		});*/
+	}
 
 }
