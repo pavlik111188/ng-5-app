@@ -1,5 +1,9 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
+    <button *ngIf="showBackArrow" mat-icon-button (click)="backClicked()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <!-- <i class="material-icons" (click)="">arrow_back</i> -->
     <span class="logo-binotel"><img src="./assets/img/logo-my.png"> <span>{{ trader_id }}</span></span>
     <button *ngIf="logged" mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>more_vert</mat-icon>

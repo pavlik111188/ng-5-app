@@ -1,4 +1,4 @@
-.block {
+.container {
 	padding: 60px 10px;
 }
 audio {
@@ -15,7 +15,9 @@ audio {
     color: rgba(0, 0, 0, 0.8);
 }
 mat-card {
+	opacity: 1;
 	margin-bottom: 15px;
+	margin-top: 0;
 }
 form {
     display: flex;
@@ -35,4 +37,65 @@ form {
 	font-weight: bold;
 	font-size: 13px;
 	margin-bottom: 10px;
+}
+.center {
+	text-align: center;
+}
+
+.mat-progress-bar {
+    display: block;
+    height: 2px !important;
+    overflow: hidden;
+    position: absolute !important;
+    transform: translateZ(0);
+    transition: opacity 250ms linear;
+    width: 100%;
+    bottom: 0px;
+    z-index: 2;
+}
+
+
+/*.container {
+  display: grid;
+  grid-template-columns: 50% auto;
+}*/
+.col {
+  padding: .4em 1.3em;
+}
+.color-dark {
+  background: #2885C4;
+}
+.color-light {
+  background: #57B3F1;
+}
+
+input.txt {
+  border: 0;
+  padding: 1em;
+  width: 80%;
+  margin-bottom: 2em;
+}
+input.btn {
+  border: 0;
+  display: block;
+  padding: 1em 3em;
+  background: #A5F883;
+  color: #003A61;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+.success {
+	text-align: center;
+}
+.success .material-icons {
+	font-size: 50px;
+    font-weight: bold;
+    color: #3f51b5;
+    border-radius: 50%;
+    background: #36f43b;
+    -webkit-box-shadow: 0px 0px 22px 3px rgba(54,244,59,1);
+	-moz-box-shadow: 0px 0px 22px 3px rgba(54,244,59,1);
+	box-shadow: 0px 0px 22px 3px rgba(54,244,59,1);
+	width: 50px;
+    margin: 0 auto;
 }

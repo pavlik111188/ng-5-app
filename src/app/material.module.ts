@@ -7,7 +7,8 @@ import {
     MatInputModule,
     MatFormFieldModule,
     MatCardModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatProgressBarModule
 } from '@angular/material';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -27,7 +28,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
         MatCardModule,
         MatDatepickerModule,
         MatNativeDateModule,
-        MatGridListModule
+        MatGridListModule,
+        MatProgressBarModule
     ],
     exports: [
         MatButtonModule,
@@ -42,7 +44,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
         MatCardModule,
         MatDatepickerModule,
         MatNativeDateModule,
-        MatGridListModule
+        MatGridListModule,
+        MatProgressBarModule
     ],
 })
 export class MaterialModule { }

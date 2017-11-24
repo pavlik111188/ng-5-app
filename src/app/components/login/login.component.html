@@ -7,7 +7,7 @@
 	        <input type="email" matInput formControlName="email" placeholder="Email" required>
 	        <div *ngIf="loginForm.controls['email'].errors && !loginForm.controls['email'].pristine" class="error-msg">
 	          <div [hidden]="!loginForm.controls['email'].errors.required">Email обязателен.</div>
-	          <div [hidden]="!loginForm.controls['email'].errors.patternInvalid">Не корректный Email.</div>
+	          <div [hidden]="!loginForm.controls['email'].errors.patternInvalid">Некорректный Email.</div>
 	        </div>
 	      </mat-input-container>
 	      <mat-input-container [ngClass]="{'error': loginForm.controls['password'].errors && !loginForm.controls['password'].pristine}"

@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { CookieService } from 'ngx-cookie-service';
 import { LoginComponent } from '../login/login.component';
+import { Location } from '@angular/common';
 
 
 @Component({
@@ -17,18 +18,26 @@ export class LayoutsComponent implements OnInit {
 
 	auth: Observable<any>;
   logged: boolean = true;
+  showBackArrow: boolean = false;
 
   constructor(
   	private authenticationService: AuthenticationService, 
   	private cookieService: CookieService,
-  	private router: Router
+  	private router: Router,
+    private _location: Location
   	) 
   { 
     router.events.subscribe((val) => {
+      let currUrl = this.router.routerState.snapshot.url;
       if (!this.cookieService.get('Auth')) {
         this.logged = false;
       } else {
         this.logged = true;       
+      }
+      if (currUrl == '/' || currUrl == 'login') {
+        this.showBackArrow = false;
+      } else {
+        this.showBackArrow = true;
       }
     });
   }
@@ -51,6 +60,10 @@ export class LayoutsComponent implements OnInit {
     this.authenticationService.logout();
     this.cookieService.delete('Auth');
     this.router.navigate(['/login']);
+  }
+
+  backClicked() {
+    this._location.back();
   }
 
 }
